@@ -3,11 +3,11 @@
 one:
   name: MyString
   recipe: MyString
-  mood_id: MyString
-  integer: MyString
+  mood_id: 1
+  belongs_to: 
 
 two:
   name: MyString
   recipe: MyString
-  mood_id: MyString
-  integer: MyString
+  mood_id: 1
+  belongs_to: 

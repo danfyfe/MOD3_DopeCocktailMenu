@@ -6,36 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
-
-
 # moods
-cozy = Mood.create(name:"Cozy")
-sophisticated = Mood.create(name:"Sophisticated")
-fun = Mood.create(name:"Fun")
-classic = Mood.create(name:"Classic")
+cozy = Mood.find_or_create_by(name:"Cozy")
+sophisticated = Mood.find_or_create_by(name:"Sophisticated")
+fun = Mood.find_or_create_by(name:"Fun")
+classic = Mood.find_or_create_by(name:"Classic")
 
 
 # cocktails
-eggnog = Cocktail.create(mood:cozy,name:"Eggnog",recipe:"Make the eggnog")
+eggnog = Cocktail.find_or_create_by(mood:cozy,name:"Eggnog",recipe:"Make the eggnog")
 
-paloma = Cocktail.create(mood:sophisticated,name:"Paloma",recipe:"Make the paloma")
+paloma = Cocktail.find_or_create_by(mood:sophisticated,name:"Paloma",recipe:"Make the paloma")
 
-pinacolada = Cocktail.create(mood:fun,name:"Piña Colada",recipe:"Make the piña colada")
+pinacolada = Cocktail.find_or_create_by(mood:fun,name:"Piña Colada",recipe:"Make the piña colada")
 
-mojito = Cocktail.create(mood:classic,name:"Mojito",recipe:"Make the mojito")
+mojito = Cocktail.find_or_create_by(mood:classic,name:"Mojito",recipe:"Make the mojito")
 
 
 # likes
-eggnog_like = Like.create(cocktail:eggnog)
-mojito_like = Like.create(cocktail:mojito)
-paloma_like = Like.create(cocktail:paloma)
-pinacolada_like = Like.create(cocktail:pinacolada)
+eggnog_like = Like.find_or_create_by(cocktail:eggnog)
+mojito_like = Like.find_or_create_by(cocktail:mojito)
+paloma_like = Like.find_or_create_by(cocktail:paloma)
+pinacolada_like = Like.find_or_create_by(cocktail:pinacolada)
 
 # comments
 
-mojito_comment = Comment.create(cocktail:mojito,content:"This mojito is great!",username:"Bob")
-eggnog_comment = Comment.create(cocktail:eggnog,content:"This eggnog is great!",username:"Bob")
-paloma_comment = Comment.create(cocktail:paloma,content:"This paloma is great!",username:"Bob")
-pinacolada_comment = Comment.create(cocktail:pinacolada,content:"This pina colada is great!",username:"Bob")
+mojito_comment = Comment.find_or_create_by(cocktail:mojito,content:"This mojito is great!",username:"Bob")
+eggnog_comment = Comment.find_or_create_by(cocktail:eggnog,content:"This eggnog is great!",username:"Bob")
+paloma_comment = Comment.find_or_create_by(cocktail:paloma,content:"This paloma is great!",username:"Bob")
+pinacolada_comment = Comment.find_or_create_by(cocktail:pinacolada,content:"This pina colada is great!",username:"Bob")
