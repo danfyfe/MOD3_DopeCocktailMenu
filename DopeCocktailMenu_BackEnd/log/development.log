@@ -456,3 +456,60 @@ FOREIGN KEY ("cocktail_id")
   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mMood Load (0.4ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mMood Load (0.3ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" ORDER BY "moods"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-05-24 15:59:17 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/soyeongoh/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/soyeongoh/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/cocktails" for ::1 at 2019-05-24 15:59:32 -0400
+Processing by Api::V1::CocktailsController#index as HTML
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mMood Load (0.4ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1[0m  [["cocktail_id", 2]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1[0m  [["cocktail_id", 2]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1[0m  [["cocktail_id", 4]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1[0m  [["cocktail_id", 4]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.95ms)
+Completed 200 OK in 90ms (Views: 67.6ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/api/v1/moods" for ::1 at 2019-05-24 15:59:45 -0400
+Processing by Api::V1::MoodsController#index as HTML
+  [1m[36mMood Load (0.3ms)[0m  [1m[34mSELECT "moods".* FROM "moods"[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1[0m  [["mood_id", 1]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1[0m  [["mood_id", 2]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1[0m  [["mood_id", 3]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1[0m  [["mood_id", 4]]
+[active_model_serializers]   ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.21ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.3ms)
+
+

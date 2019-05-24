@@ -15,11 +15,8 @@ classic = Mood.find_or_create_by(name: "Classic")
 
 # cocktails
 eggnog = Cocktail.find_or_create_by(mood: cozy, name: "Eggnog", recipe: "Make the eggnog")
-
 paloma = Cocktail.find_or_create_by(mood: sophisticated, name: "Paloma", recipe: "Make the paloma")
-
 pinacolada = Cocktail.find_or_create_by(mood:fun, name: "Piña Colada", recipe: "Make the piña colada")
-
 mojito = Cocktail.find_or_create_by(mood:classic, name:"Mojito", recipe: "Make the mojito")
 
 
