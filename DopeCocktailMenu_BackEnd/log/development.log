@@ -1,0 +1,301 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateMoods (20190524150733)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190524150733_create_moods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190524150733"]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateCocktails (20190524150910)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe" varchar, "mood_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_4b8eb9282b"
+FOREIGN KEY ("mood_id")
+  REFERENCES "moods" ("id")
+)[0m
+  ↳ db/migrate/20190524150910_create_cocktails.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cocktails_on_mood_id" ON "cocktails" ("mood_id")[0m
+  ↳ db/migrate/20190524150910_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190524150910"]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateLikes (20190524151259)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "likes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cocktail_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_1e94f88855"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+)[0m
+  ↳ db/migrate/20190524151259_create_likes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_likes_on_cocktail_id" ON "likes" ("cocktail_id")[0m
+  ↳ db/migrate/20190524151259_create_likes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190524151259"]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateComments (20190524151504)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cocktail_id" integer, "content" varchar, "username" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_a362fb6fd6"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+)[0m
+  ↳ db/migrate/20190524151504_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_cocktail_id" ON "comments" ("cocktail_id")[0m
+  ↳ db/migrate/20190524151504_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190524151504"]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-24 15:16:31.035036"], ["updated_at", "2019-05-24 15:16:31.035036"]]
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cozy"], ["created_at", "2019-05-24 15:29:33.348967"], ["updated_at", "2019-05-24 15:29:33.348967"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sophisticated"], ["created_at", "2019-05-24 15:29:33.351840"], ["updated_at", "2019-05-24 15:29:33.351840"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fun"], ["created_at", "2019-05-24 15:29:33.354078"], ["updated_at", "2019-05-24 15:29:33.354078"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMood Create (0.2ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic"], ["created_at", "2019-05-24 15:29:33.356216"], ["updated_at", "2019-05-24 15:29:33.356216"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cozy"], ["created_at", "2019-05-24 15:33:07.049851"], ["updated_at", "2019-05-24 15:33:07.049851"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sophisticated"], ["created_at", "2019-05-24 15:33:07.052436"], ["updated_at", "2019-05-24 15:33:07.052436"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.2ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fun"], ["created_at", "2019-05-24 15:33:07.054761"], ["updated_at", "2019-05-24 15:33:07.054761"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic"], ["created_at", "2019-05-24 15:33:07.056886"], ["updated_at", "2019-05-24 15:33:07.056886"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cozy"], ["created_at", "2019-05-24 15:34:04.114736"], ["updated_at", "2019-05-24 15:34:04.114736"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sophisticated"], ["created_at", "2019-05-24 15:34:04.117259"], ["updated_at", "2019-05-24 15:34:04.117259"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fun"], ["created_at", "2019-05-24 15:34:04.119697"], ["updated_at", "2019-05-24 15:34:04.119697"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic"], ["created_at", "2019-05-24 15:34:04.121990"], ["updated_at", "2019-05-24 15:34:04.121990"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cozy"], ["created_at", "2019-05-24 15:35:02.756939"], ["updated_at", "2019-05-24 15:35:02.756939"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sophisticated"], ["created_at", "2019-05-24 15:35:02.760113"], ["updated_at", "2019-05-24 15:35:02.760113"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fun"], ["created_at", "2019-05-24 15:35:02.762555"], ["updated_at", "2019-05-24 15:35:02.762555"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic"], ["created_at", "2019-05-24 15:35:02.764841"], ["updated_at", "2019-05-24 15:35:02.764841"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eggnog"], ["recipe", "Make the eggnog"], ["mood_id", 13], ["created_at", "2019-05-24 15:35:02.784654"], ["updated_at", "2019-05-24 15:35:02.784654"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Paloma"], ["recipe", "Make the paloma"], ["mood_id", 14], ["created_at", "2019-05-24 15:35:02.787452"], ["updated_at", "2019-05-24 15:35:02.787452"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Piña Colada"], ["recipe", "Make the piña colada"], ["mood_id", 15], ["created_at", "2019-05-24 15:35:02.789764"], ["updated_at", "2019-05-24 15:35:02.789764"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielfyfe/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.4ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cozy"], ["created_at", "2019-05-24 15:35:25.093829"], ["updated_at", "2019-05-24 15:35:25.093829"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sophisticated"], ["created_at", "2019-05-24 15:35:25.096426"], ["updated_at", "2019-05-24 15:35:25.096426"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fun"], ["created_at", "2019-05-24 15:35:25.098676"], ["updated_at", "2019-05-24 15:35:25.098676"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMood Create (0.3ms)[0m  [1m[32mINSERT INTO "moods" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Classic"], ["created_at", "2019-05-24 15:35:25.101204"], ["updated_at", "2019-05-24 15:35:25.101204"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eggnog"], ["recipe", "Make the eggnog"], ["mood_id", 17], ["created_at", "2019-05-24 15:35:25.113253"], ["updated_at", "2019-05-24 15:35:25.113253"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Paloma"], ["recipe", "Make the paloma"], ["mood_id", 18], ["created_at", "2019-05-24 15:35:25.115618"], ["updated_at", "2019-05-24 15:35:25.115618"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Piña Colada"], ["recipe", "Make the piña colada"], ["mood_id", 19], ["created_at", "2019-05-24 15:35:25.118291"], ["updated_at", "2019-05-24 15:35:25.118291"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mojito"], ["recipe", "Make the mojito"], ["mood_id", 20], ["created_at", "2019-05-24 15:35:25.121092"], ["updated_at", "2019-05-24 15:35:25.121092"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cocktail_id", 4], ["created_at", "2019-05-24 15:35:25.128153"], ["updated_at", "2019-05-24 15:35:25.128153"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cocktail_id", 7], ["created_at", "2019-05-24 15:35:25.130464"], ["updated_at", "2019-05-24 15:35:25.130464"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cocktail_id", 5], ["created_at", "2019-05-24 15:35:25.132740"], ["updated_at", "2019-05-24 15:35:25.132740"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cocktail_id", 6], ["created_at", "2019-05-24 15:35:25.136171"], ["updated_at", "2019-05-24 15:35:25.136171"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cocktail_id", 7], ["content", "This mojito is great!"], ["username", "Bob"], ["created_at", "2019-05-24 15:35:25.145618"], ["updated_at", "2019-05-24 15:35:25.145618"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cocktail_id", 7], ["content", "This eggnog is great!"], ["username", "Bob"], ["created_at", "2019-05-24 15:35:25.150922"], ["updated_at", "2019-05-24 15:35:25.150922"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cocktail_id", 5], ["content", "This paloma is great!"], ["username", "Bob"], ["created_at", "2019-05-24 15:35:25.171246"], ["updated_at", "2019-05-24 15:35:25.171246"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cocktail_id", 6], ["content", "This pina colada is great!"], ["username", "Bob"], ["created_at", "2019-05-24 15:35:25.174285"], ["updated_at", "2019-05-24 15:35:25.174285"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = ? LIMIT ?[0m  [["cocktail_id", 1], ["LIMIT", 11]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = ? ORDER BY "comments"."id" ASC LIMIT ?[0m  [["cocktail_id", 1], ["LIMIT", 1]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = ? LIMIT ?[0m  [["cocktail_id", 7], ["LIMIT", 11]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."cocktail_id" = ?[0m  [["cocktail_id", 7]]
