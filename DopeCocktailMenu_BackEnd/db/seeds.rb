@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # moods
+puts("seeding")
 cozy = Mood.find_or_create_by(name: "Cozy", video_url: "https://www.youtube.com/watch?v=lpLb_69UwKw&vl=en
 ")
 sophisticated = Mood.find_or_create_by(name: "Sophisticated", video_url: "https://www.youtube.com/watch?v=kNAphsl67vI ")
@@ -33,3 +34,4 @@ mojito_comment = Comment.find_or_create_by(cocktail: mojito, content: "This moji
 eggnog_comment = Comment.find_or_create_by(cocktail: eggnog, content: "This eggnog is great!", username: "Bob")
 paloma_comment = Comment.find_or_create_by(cocktail: paloma, content: "This paloma is great!", username: "Bob")
 pinacolada_comment = Comment.find_or_create_by(cocktail: pinacolada, content:"This pina colada is great!", username: "Bob")
+puts("finished seeding")

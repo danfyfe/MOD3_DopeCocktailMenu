@@ -14,7 +14,7 @@ class Api::V1::CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.permit(:cocktail).require(:name, :recipe, :mood_id)
+    params.permit(:cocktail).require(:name, :recipe, :mood_id, :img_url)
   end
 
 end
