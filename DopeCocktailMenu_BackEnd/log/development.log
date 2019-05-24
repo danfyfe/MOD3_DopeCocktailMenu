@@ -513,3 +513,228 @@ Processing by Api::V1::MoodsController#index as HTML
 Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.3ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (120.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "DopeCocktailMenu_development"[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (120.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "DopeCocktailMenu_test"[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (243.3ms)[0m  [1m[35mCREATE DATABASE "DopeCocktailMenu_development" ENCODING = 'unicode'[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (245.7ms)[0m  [1m[35mCREATE DATABASE "DopeCocktailMenu_test" ENCODING = 'unicode'[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4959655788389731800)[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateMoods (20190524185607)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "moods" ("id" bigserial primary key, "name" character varying, "video_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190524185607_create_moods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190524185607"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateCocktails (20190524185743)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "recipe" character varying, "mood_id" bigint, "img_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_4b8eb9282b"
+FOREIGN KEY ("mood_id")
+  REFERENCES "moods" ("id")
+)[0m
+  ↳ db/migrate/20190524185743_create_cocktails.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_cocktails_on_mood_id" ON "cocktails"  ("mood_id")[0m
+  ↳ db/migrate/20190524185743_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190524185743"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateLikes (20190524185928)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "cocktail_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1e94f88855"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+)[0m
+  ↳ db/migrate/20190524185928_create_likes.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_cocktail_id" ON "likes"  ("cocktail_id")[0m
+  ↳ db/migrate/20190524185928_create_likes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190524185928"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateComments (20190524190011)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "cocktail_id" bigint, "content" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_a362fb6fd6"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+)[0m
+  ↳ db/migrate/20190524190011_create_comments.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_cocktail_id" ON "comments"  ("cocktail_id")[0m
+  ↳ db/migrate/20190524190011_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190524190011"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-24 20:34:01.888678"], ["updated_at", "2019-05-24 20:34:01.888678"]]
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4959655788389731800)[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/soyeongoh/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mMood Load (0.4ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."name" = $1 AND "moods"."video_url" = $2 LIMIT $3[0m  [["name", "Cozy"], ["video_url", "https://www.youtube.com/watch?v=lpLb_69UwKw&vl=en\n"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mMood Create (0.5ms)[0m  [1m[32mINSERT INTO "moods" ("name", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cozy"], ["video_url", "https://www.youtube.com/watch?v=lpLb_69UwKw&vl=en\n"], ["created_at", "2019-05-24 20:38:34.924002"], ["updated_at", "2019-05-24 20:38:34.924002"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."name" = $1 AND "moods"."video_url" = $2 LIMIT $3[0m  [["name", "Sophisticated"], ["video_url", "https://www.youtube.com/watch?v=kNAphsl67vI "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Create (0.2ms)[0m  [1m[32mINSERT INTO "moods" ("name", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sophisticated"], ["video_url", "https://www.youtube.com/watch?v=kNAphsl67vI "], ["created_at", "2019-05-24 20:38:34.926337"], ["updated_at", "2019-05-24 20:38:34.926337"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."name" = $1 AND "moods"."video_url" = $2 LIMIT $3[0m  [["name", "Fun"], ["video_url", "https://www.youtube.com/watch?v=XdPOiJ0qPhI"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Create (0.2ms)[0m  [1m[32mINSERT INTO "moods" ("name", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fun"], ["video_url", "https://www.youtube.com/watch?v=XdPOiJ0qPhI"], ["created_at", "2019-05-24 20:38:34.928104"], ["updated_at", "2019-05-24 20:38:34.928104"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" WHERE "moods"."name" = $1 AND "moods"."video_url" = $2 LIMIT $3[0m  [["name", "Classic"], ["video_url", "https://www.youtube.com/watch?v=jhx6tGm11MM"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMood Create (0.2ms)[0m  [1m[32mINSERT INTO "moods" ("name", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Classic"], ["video_url", "https://www.youtube.com/watch?v=jhx6tGm11MM"], ["created_at", "2019-05-24 20:38:34.929921"], ["updated_at", "2019-05-24 20:38:34.929921"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1 AND "cocktails"."name" = $2 AND "cocktails"."recipe" = $3 AND "cocktails"."img_url" = $4 LIMIT $5[0m  [["mood_id", 1], ["name", "Eggnog"], ["recipe", "Make the eggnog"], ["img_url", "https://www.seriouseats.com/2017/12/20171101-eggnog-vicky-wasik-1-1500x1125.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCocktail Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eggnog"], ["recipe", "Make the eggnog"], ["mood_id", 1], ["img_url", "https://www.seriouseats.com/2017/12/20171101-eggnog-vicky-wasik-1-1500x1125.jpg"], ["created_at", "2019-05-24 20:38:34.951197"], ["updated_at", "2019-05-24 20:38:34.951197"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1 AND "cocktails"."name" = $2 AND "cocktails"."recipe" = $3 AND "cocktails"."img_url" = $4 LIMIT $5[0m  [["mood_id", 2], ["name", "Paloma"], ["recipe", "Make the paloma"], ["img_url", "http://drizzleanddip.com/wp-content/uploads/2012/03/MG_9171-copy.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paloma"], ["recipe", "Make the paloma"], ["mood_id", 2], ["img_url", "http://drizzleanddip.com/wp-content/uploads/2012/03/MG_9171-copy.jpg"], ["created_at", "2019-05-24 20:38:34.957008"], ["updated_at", "2019-05-24 20:38:34.957008"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1 AND "cocktails"."name" = $2 AND "cocktails"."recipe" = $3 AND "cocktails"."img_url" = $4 LIMIT $5[0m  [["mood_id", 3], ["name", "Piña Colada"], ["recipe", "Make the piña colada"], ["img_url", "https://d1jhh0buemfyuj.cloudfront.net/files/sites/126/2018/02/pina-colada.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Piña Colada"], ["recipe", "Make the piña colada"], ["mood_id", 3], ["img_url", "https://d1jhh0buemfyuj.cloudfront.net/files/sites/126/2018/02/pina-colada.jpg"], ["created_at", "2019-05-24 20:38:34.961096"], ["updated_at", "2019-05-24 20:38:34.961096"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."mood_id" = $1 AND "cocktails"."name" = $2 AND "cocktails"."recipe" = $3 AND "cocktails"."img_url" = $4 LIMIT $5[0m  [["mood_id", 4], ["name", "Mojito"], ["recipe", "Make the mojito"], ["img_url", "https://s3.amazonaws.com/lionnz/the_mix/uploads/2016/11/bacardi_mojito-min.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "recipe", "mood_id", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mojito"], ["recipe", "Make the mojito"], ["mood_id", 4], ["img_url", "https://s3.amazonaws.com/lionnz/the_mix/uploads/2016/11/bacardi_mojito-min.jpg"], ["created_at", "2019-05-24 20:38:34.965853"], ["updated_at", "2019-05-24 20:38:34.965853"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1 LIMIT $2[0m  [["cocktail_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cocktail_id", 1], ["created_at", "2019-05-24 20:38:34.982502"], ["updated_at", "2019-05-24 20:38:34.982502"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1 LIMIT $2[0m  [["cocktail_id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cocktail_id", 4], ["created_at", "2019-05-24 20:38:34.985480"], ["updated_at", "2019-05-24 20:38:34.985480"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1 LIMIT $2[0m  [["cocktail_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cocktail_id", 2], ["created_at", "2019-05-24 20:38:34.987326"], ["updated_at", "2019-05-24 20:38:34.987326"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."cocktail_id" = $1 LIMIT $2[0m  [["cocktail_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("cocktail_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cocktail_id", 3], ["created_at", "2019-05-24 20:38:34.989056"], ["updated_at", "2019-05-24 20:38:34.989056"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1 AND "comments"."content" = $2 AND "comments"."username" = $3 LIMIT $4[0m  [["cocktail_id", 4], ["content", "This mojito is great!"], ["username", "Bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cocktail_id", 4], ["content", "This mojito is great!"], ["username", "Bob"], ["created_at", "2019-05-24 20:38:34.999245"], ["updated_at", "2019-05-24 20:38:34.999245"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1 AND "comments"."content" = $2 AND "comments"."username" = $3 LIMIT $4[0m  [["cocktail_id", 1], ["content", "This eggnog is great!"], ["username", "Bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cocktail_id", 1], ["content", "This eggnog is great!"], ["username", "Bob"], ["created_at", "2019-05-24 20:38:35.001760"], ["updated_at", "2019-05-24 20:38:35.001760"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1 AND "comments"."content" = $2 AND "comments"."username" = $3 LIMIT $4[0m  [["cocktail_id", 2], ["content", "This paloma is great!"], ["username", "Bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cocktail_id", 2], ["content", "This paloma is great!"], ["username", "Bob"], ["created_at", "2019-05-24 20:38:35.003502"], ["updated_at", "2019-05-24 20:38:35.003502"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."cocktail_id" = $1 AND "comments"."content" = $2 AND "comments"."username" = $3 LIMIT $4[0m  [["cocktail_id", 3], ["content", "This pina colada is great!"], ["username", "Bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("cocktail_id", "content", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cocktail_id", 3], ["content", "This pina colada is great!"], ["username", "Bob"], ["created_at", "2019-05-24 20:38:35.005318"], ["updated_at", "2019-05-24 20:38:35.005318"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" ORDER BY "cocktails"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMood Load (0.3ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMood Load (0.2ms)[0m  [1m[34mSELECT  "moods".* FROM "moods" ORDER BY "moods"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
