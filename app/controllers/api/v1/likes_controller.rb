@@ -7,14 +7,15 @@ class Api::V1::LikesController < ApplicationController
 
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
-    byebug
-    @like = Like.create(like_params)
+
+    @like = Like.create(cocktail_id: @cocktail.id)
     render json: @like
   end
 
   private
 
   def like_params
+    byebug
     params.permit(:like).require(:cocktail_id)
   end
 
