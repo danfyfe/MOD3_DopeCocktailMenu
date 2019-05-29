@@ -79,15 +79,15 @@ cosmopolitan = Cocktail.find_or_create_by(mood:classic, name:"Cosmopolitan", rec
 
 
 # likes
-eggnog_like = Like.find_or_create_by(cocktail: eggnog)
-mojito_like = Like.find_or_create_by(cocktail: mojito)
-paloma_like = Like.find_or_create_by(cocktail: paloma)
-pinacolada_like = Like.find_or_create_by(cocktail: pinacolada)
+# eggnog_like = Like.find_or_create_by(cocktail: eggnog)
+# mojito_like = Like.find_or_create_by(cocktail: mojito)
+# paloma_like = Like.find_or_create_by(cocktail: paloma)
+# pinacolada_like = Like.find_or_create_by(cocktail: pinacolada)
 
 
 # comments
-mojito_comment = Comment.find_or_create_by(cocktail: mojito, content: "This mojito is great!", username: "Bob")
-eggnog_comment = Comment.find_or_create_by(cocktail: eggnog, content: "This eggnog is great!", username: "Bob")
-paloma_comment = Comment.find_or_create_by(cocktail: paloma, content: "This paloma is great!", username: "Bob")
-pinacolada_comment = Comment.find_or_create_by(cocktail: pinacolada, content:"This pina colada is great!", username: "Bob")
+# mojito_comment = Comment.find_or_create_by(cocktail: mojito, content: "This mojito is great!", username: "Bob")
+# eggnog_comment = Comment.find_or_create_by(cocktail: eggnog, content: "This eggnog is great!", username: "Bob")
+# paloma_comment = Comment.find_or_create_by(cocktail: paloma, content: "This paloma is great!", username: "Bob")
+# pinacolada_comment = Comment.find_or_create_by(cocktail: pinacolada, content:"This pina colada is great!", username: "Bob")
 puts("finished seeding")
