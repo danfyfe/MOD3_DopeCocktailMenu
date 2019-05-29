@@ -15,7 +15,6 @@ class Api::V1::LikesController < ApplicationController
   private
 
   def like_params
-    byebug
     params.permit(:like).require(:cocktail_id)
   end
 
