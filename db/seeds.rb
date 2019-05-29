@@ -31,7 +31,7 @@ hotToddy = Cocktail.find_or_create_by(mood: cozy, name: "Hot Toddy", recipe: "Po
 mulledWine = Cocktail.find_or_create_by(mood: cozy, name: "Mulled Wine", recipe: "Empty one full bottle of a dry, red wine into a saucepan and begin to simmer on medium heat. Add one full orange (sliced into rounds), eight whole cloves, two cinnamon sticks, two star anise, two to four tablespoons of sugar, honey, or maple syrup, and a quarter cup of brandy. Let simmer on medium low heat for at least 15 minutes.", img_url: "https://www.gimmesomeoven.com/wp-content/uploads/2013/10/Mulled-Wine-Recipe-1-2.jpg", description:"A traditional drink with deep flavors made with red wine and spices.")
 
 
-irishCoffee = Cocktail.find_or_create_by(mood: cozy, name: "Irish Coffee", recipe: "Prepare a cup of your favorite coffee. Add 1 tablespoon of brown sugar and stir until dissolved. Add shot of Irish whiskey. Top with whipped cream.", img_url: "https://foodchannelcom.files.wordpress.com/2017/06/irish_coffee_4.jpg", description:"Do you like coffee? Do you like whiskey? Why not drink them at the same time?")
+irishCoffee = Cocktail.find_or_create_by(mood: cozy, name: "Irish Coffee", recipe: "Prepare a cup of your favorite coffee. Add 1 tablespoon of brown sugar and stir until dissolved. Add an ounce and a half of Irish whiskey. Top with whipped cream.", img_url: "https://foodchannelcom.files.wordpress.com/2017/06/irish_coffee_4.jpg", description:"Do you like coffee? Do you like whiskey? Why not drink them at the same time?")
 
 
 
