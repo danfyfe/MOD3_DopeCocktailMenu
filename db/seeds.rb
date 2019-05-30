@@ -36,9 +36,9 @@ irishCoffee = Cocktail.find_or_create_by(mood: cozy, name: "Irish Coffee", recip
 
 
 # sophisticated
-paloma = Cocktail.find_or_create_by(mood: sophisticated, name: "Paloma", recipe: "Combine a quarter cup of fresh grapefruit juice, 1 tablespoon of fresh lime juice and a teaspoon of sugar in a glass and stir until the sugar has dissolved. Mix in a quarter cup of mescal or tequila, add ice, and top with club soda. Garnish with a grapefruit wedge.", img_url: "http://drizzleanddip.com/wp-content/uploads/2012/03/MG_9171-copy.jpg", description:"A refreshing Mexican cocktail made from mescal or tequila and fresh grapefruit.")
+paloma = Cocktail.find_or_create_by(mood: sophisticated, name: "Paloma", recipe: "Combine a quarter cup of fresh grapefruit juice, 1 tablespoon of fresh lime juice and a teaspoon of sugar in a glass and stir until the sugar has dissolved. Mix in a quarter cup of mezcal or tequila, add ice, and top with club soda. Garnish with a grapefruit wedge.", img_url: "https://www.mysequinedlife.com/MSLblog/wp-content/uploads/2016/12/champagne-paloma-1.jpg", description:"A refreshing Mexican cocktail made from mezcal or tequila and fresh grapefruit.")
 
-ginAndTonic = Cocktail.find_or_create_by(mood: sophisticated, name: "Gin and Tonic", recipe: "Fill a glass with ice. Pour two ounces of gin and one tablespoon of fresh lime juice over the ice. Top with four ounces of fresh tonic water and one lime wedge. ", img_url: "https://theforkedspoon.com/wp-content/uploads/2018/06/gin-and-tonic-3.jpg.webp", description:"A resfreshingly fizzy cocktail for a discerning palate.")
+negroni = Cocktail.find_or_create_by(mood:sophisticated, name:"Negroni", recipe: "In a cocktail shaker filled with ice, combine one ounce of gin, one ounce of Campari, and one ounce of sweet vermouth. Shake until chilled and serve in a short glass. Garnish with an orange peel.", img_url: "https://destinationkennebunkport.com/wp-content/uploads/2016/06/negroni-recipe-dt.jpg",description:"A refreshingly bitter classic made with Campari, gin, and sweet vermouth.")
 
 manhattan = Cocktail.find_or_create_by(mood: sophisticated, name: "Manhattan", recipe: "Combine two ounces of whiskey, a half ounce of sweet vermouth and a dash of Angostura bitters in a cocktail mixing class. Add ice and stir until chilled. Strain into a cocktail glass. Garnish with a maraschino cherry.", img_url: "https://assets.punchdrink.com/wp-content/uploads/2013/09/Manhattan.jpg", description:"This timeless whiskey cocktail is best enjoyed while discussing intellectual curiosities with fellow scholars.")
 
@@ -50,28 +50,18 @@ pinacolada = Cocktail.find_or_create_by(mood:fun, name: "Piña Colada", recipe: 
 
 margarita = Cocktail.find_or_create_by(mood:fun, name: "Margarita", recipe: "In a cocktail shaker filled with ice, combine two ounces of white tequila with one ounce of fresh lime juice, a half ounce of orange liquer, and a half ounce of agave syrup. Shake until chilled, pour into a salted cocktail glass filled with ice, garnish with a wedge of lime.", img_url: "https://cdn.liquor.com/wp-content/uploads/2016/11/16132003/margarita-rocks-salt-720sq.jpg",description:"Tequila, limes, and good times.")
 
-daiquiri = Cocktail.find_or_create_by(mood:fun, name: "Daiquiri", recipe: "", img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shutterstock-442299592mod-1512080757.jpg",description:"")
+daiquiri = Cocktail.find_or_create_by(mood:fun, name: "Daiquiri", recipe: "In a cocktail shaker filled with ice, comibine two ounces of light rum, one ounce of fresh lime juice, and a half ounce of simple syrup. Shake until cold and pour into a chilled martini glass. Garnish with a lime wedge.", img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shutterstock-442299592mod-1512080757.jpg",description:"A deliciously sweet, lime flavored cocktail guaranteed to put a smile on your face.")
 
-midoriSour = Cocktail.find_or_create_by(mood:fun, name: "Midori Sour", recipe: "", img_url: "https://drivito1.imgix.drizly.com/191f3868f8abdc2d/8951f9c64135/Midori_Header.png?auto=format%2Ccompress&dpr=2&fm=jpeg&q=30&w=375",description:"")
-
-
-
-
-
-
-
-
-
-
+midoriSour = Cocktail.find_or_create_by(mood:fun, name: "Midori Sour", recipe: "In a cocktail shaker filled with ice, combine one and a half ounces of Midori Melon liquer, two ounces of sweet and sour mix, and one and a half ounces of fresh lime juice. Shake until chilled and pour into a highball glass. Top with lemon-lime soda and garnish with a maraschino cherry.", img_url: "https://drivito1.imgix.drizly.com/191f3868f8abdc2d/8951f9c64135/Midori_Header.png?auto=format%2Ccompress&dpr=2&fm=jpeg&q=30&w=375",description:"A fruity and refreshing take on the whiskey sour. The Midori Sour is the perfect combination of sweet and sour.")
 
 # classic
-mojito = Cocktail.find_or_create_by(mood:classic, name:"Mojito", recipe: "", img_url: "https://s3.amazonaws.com/lionnz/the_mix/uploads/2016/11/bacardi_mojito-min.jpg",description:"")
+martini = Cocktail.find_or_create_by(mood:classic, name:"Martini", recipe: "In a cocktail shaker filled with ice, combine three ounces of vodka or gin with a half an ounce of dry vermouth. Shake until cold and strain into a chilled martini glass. Garnish with olives.", img_url: "https://cdn3.tmbi.com/toh/GoogleImagesPostCard/Martini_exps37184_HC2847498D03_28_2b_RMS.jpg",description:"The classic cocktail.")
 
-bloodyMary = Cocktail.find_or_create_by(mood:classic, name:"Bloody Mary", recipe: "", img_url: "https://kitchenswagger.com/wp-content/uploads/2016/09/bloody-mary3.jpg",description:"")
+mojito = Cocktail.find_or_create_by(mood:classic, name:"Mojito", recipe: "In a glass, place one half of a lime (cut into thirds), a tablespoon of white sugar, and twelve mint leaves. Muddle until you can smell the mint. Fill the glass half way with ice and add one and a half ounces of your favorite rum. Stir the mixture until the sugar dissolves and the drink is chilled. Fill the remainder of the glass with crushed ice and club soda. Garnish with a sprig of mint.", img_url: "https://s3.amazonaws.com/lionnz/the_mix/uploads/2016/11/bacardi_mojito-min.jpg",description:"A classic rum cocktail that is as refreshing as it is beautiful.")
 
-negroni = Cocktail.find_or_create_by(mood:classic, name:"Negroni", recipe: "", img_url: "https://destinationkennebunkport.com/wp-content/uploads/2016/06/negroni-recipe-dt.jpg",description:"")
+ginAndTonic = Cocktail.find_or_create_by(mood: classic, name: "Gin and Tonic", recipe: "Fill a glass with ice. Pour two ounces of gin and one tablespoon of fresh lime juice over the ice. Top with four ounces of fresh tonic water and one lime wedge. ", img_url: "https://theforkedspoon.com/wp-content/uploads/2018/06/gin-and-tonic-3.jpg.webp", description:"A resfreshingly fizzy cocktail for a discerning palate.")
 
-cosmopolitan = Cocktail.find_or_create_by(mood:classic, name:"Cosmopolitan", recipe: "", img_url: "https://i1.wp.com/gigglesgobblesandgulps.com/wp-content/uploads/2018/06/cosmopolitan-cocktail-recipe.jpg?ssl=1",description:"")
+cosmopolitan = Cocktail.find_or_create_by(mood:classic, name:"Cosmopolitan", recipe: "In a cocktail shaker filled with ice, combine one and a half ounces of vodka, a quarter ounce of fresh lime juice, a quarter ounce of triple sec, and a quarter ounce of cranberry juice. Shake until chilled. Serve in a chilled martini glass. Garnish with a wedge of lime.", img_url: "https://i1.wp.com/gigglesgobblesandgulps.com/wp-content/uploads/2018/06/cosmopolitan-cocktail-recipe.jpg?ssl=1",description:"Often refered to as the 'cosmo,' this cocktail combines orange, lime, and cranberry flavors in perfect harmony.")
 
 
 
