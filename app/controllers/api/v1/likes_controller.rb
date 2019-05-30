@@ -7,7 +7,6 @@ class Api::V1::LikesController < ApplicationController
 
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
-
     @like = Like.create(cocktail_id: @cocktail.id)
     render json: @like
   end
