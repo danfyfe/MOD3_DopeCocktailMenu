@@ -1,6 +1,6 @@
 <h2>Welcome to Dope Cocktail Menu!</h2>
 
-<em>built with rails version: 2.6.1<em>\
+built with rails version: 2.6.1\
 By: Soyeong Oh and Dan Fyfe
 
 **Setup**
