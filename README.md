@@ -1,24 +1,14 @@
-# README
+<h2>Welcome to Dope Cocktail Menu!</h2>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<em>built with rails version: 2.6.1<em>\
+By: Soyeong Oh and Dan Fyfe
 
-Things you may want to cover:
+**Setup**
+- In your terminal, while inside the Cook This Back End directory, run 'bundle install', 'rails db:seed' and 'rails s'
+- Complete the final setup in the [Dope Cocktail Menu Front End](https://github.com/danfyfe/DopeCocktailMenu_FrontEnd)
 
-* Ruby version
+**Basic Usage**
+- The user selects a mood, which transforms the page and displays cocktail recipes that fit the mood.
+- The user can then view, like, comment on a recipe, or select a different mood from the menu.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
