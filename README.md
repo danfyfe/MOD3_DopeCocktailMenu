@@ -4,7 +4,7 @@ built with rails version: 2.6.1\
 By: Soyeong Oh and Dan Fyfe
 
 **Setup**
-- In your terminal, while inside the Dope Cocktail Menu Back End directory, run 'bundle install', 'rails db:seed' and 'rails s'
+- In your terminal, while inside the Dope Cocktail Menu Back End directory, run 'bundle install', ('rails db:create', 'rails db:migrate', if needed), 'rails db:seed' and 'rails s'
 - Complete the final setup in [Dope Cocktail Menu Front End](https://github.com/danfyfe/DopeCocktailMenu_FrontEnd)
 
 **Basic Usage**
