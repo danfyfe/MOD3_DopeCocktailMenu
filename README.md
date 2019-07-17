@@ -4,8 +4,8 @@
 By: Soyeong Oh and Dan Fyfe
 
 **Setup**
-- In your terminal, while inside the Cook This Back End directory, run 'bundle install', 'rails db:seed' and 'rails s'
-- Complete the final setup in the [Dope Cocktail Menu Front End](https://github.com/danfyfe/DopeCocktailMenu_FrontEnd)
+- In your terminal, while inside the Dope Cocktail Menu Back End directory, run 'bundle install', 'rails db:seed' and 'rails s'
+- Complete the final setup in [Dope Cocktail Menu Front End](https://github.com/danfyfe/DopeCocktailMenu_FrontEnd)
 
 **Basic Usage**
 - The user selects a mood, which transforms the page and displays cocktail recipes that fit the mood.
