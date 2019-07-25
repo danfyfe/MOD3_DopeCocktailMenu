@@ -82,4 +82,5 @@ production:
   <<: *default
   database: DopeCocktailMenu_production
   username: DopeCocktailMenu
+   url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['DOPECOCKTAILMENU_DATABASE_PASSWORD'] %>
